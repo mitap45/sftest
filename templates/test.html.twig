@@ -5,11 +5,31 @@
     {{ encore_entry_link_tags('test') }}
 {% endblock %}
 
+{% block body %}
+    Lucky number: {{ number }}
+
+    <div id="app">
+        ${ message }$
+        ${ messageTwo }$
+    </div>
+
+{% endblock %}
+
 {% block javascripts %}
     {{ parent() }}
     {{ encore_entry_script_tags('test') }}
-{% endblock %}
 
-{% block body %}
-    Lucky number: {{ number }}
+{#    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>#}
+
+{#    <script>#}
+{#        var app = new Vue({#}
+{#            el: '#app',#}
+{#            data: {#}
+{#                message: 'Hello Vue!'#}
+{#            },#}
+{#            delimiters: ['${', '}$']#}
+{#        })#}
+
+{#    </script>#}
+
 {% endblock %}
